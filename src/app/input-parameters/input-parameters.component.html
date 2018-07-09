@@ -1,0 +1,38 @@
+<div class="input_parameters">
+<h2>
+First, select the most relevant clinical setting or likely prevalence of depression in your practice.
+</h2>
+<br>
+<h3>Select patient group</h3>
+<nav>
+  <a target="_blank" routerLink="/more-info" routerLinkActive="active">
+More info</a>
+</nav>
+<mat-form-field>
+  <mat-select placeholder="Patient group" [(ngModel)]="prevalenceSelected">
+    <mat-option *ngFor="let prevalence of depression" [value]="prevalence.prevalence">
+      {{prevalence.setting}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+
+  <h3>Option 1: Recommended prevalence in %</h3>
+  <mat-form-field class="example-full-width">
+    <input class="recommended" matInput placeholder="Recommended prevalence" disabled [(ngModel)]="prevalenceSelected">
+  </mat-form-field>
+  <h3>Option 2: Choose your own prevalence in %</h3>
+  <mat-form-field class="example-full-width">
+    <input class="users_prevalence" matInput placeholder="Your own prevalence" [(ngModel)]="prevalenceSelected2">
+  </mat-form-field>
+  <div class="button-row">
+  <button mat-raised-button (click)="Calc()">Calculate</button>
+</div>
+<app-screen-positive></app-screen-positive>
+<app-screen-positive-graphic chel="{{amount}}"></app-screen-positive-graphic>
+<app-have-depression></app-have-depression>
+<app-have-depression-graphic></app-have-depression-graphic>
+<p class="manuscript">
+  We analyzed data collected in XX studies from more than 17,000
+  individuals from around the world to estimate how the PHQ-9 might perform in clinical practice. [Link to manuscript]
+</p>
+</div>

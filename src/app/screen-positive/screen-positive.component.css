@@ -1,0 +1,19 @@
+svg
+{
+  width:4%;
+  height:1%;
+  position: relative;
+  display: inline;
+
+}
+p
+{
+  display: inline;
+  font-size: 22px;
+  padding-top: 0;
+}
+.screen_positive
+{
+  text-align: center;
+  padding-top:1%;
+}

@@ -1,0 +1,17 @@
+svg
+{
+  width:4.5%;
+  min-width: 40px;
+  min-height: 50px;
+  height:1.5%;
+  padding-right: 0.5%;
+}
+.graphic
+{
+  display: block;
+  margin-top: 20px;
+  padding-top: 20px;
+}
+.red{
+    fill: red;
+}
